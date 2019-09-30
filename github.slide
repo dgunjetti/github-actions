@@ -1,0 +1,145 @@
+Deepak Gunjetti
+Solution Architect @ Andcloud
+deepak@andcloud.io
+@dgunjetti
+
+* git commands
+
+git init
+git remote add origin <link>
+git pull origin master
+git push
+
+git add - add files to your index
+git status - which files are added to index
+git commit - make changes in local repo
+
+git log
+
+* Branching
+
+- there are two types 
+    
+    local branches
+    remote tracking branches
+
+git branch first-branch 
+git checkout first-branch - switch to first-branch 
+
+git checkout master
+git merge first-branch  - merging first-branch into master 
+
+git add -A - add all untracked files
+git commit -a -m "update" - commit all changes
+
+* Branching..
+
+git pull - pull code from remote repo and merge to master
+git fetch - pull code into seperate branch 
+
+git checkout first-branch
+git rebase master - combining work from different branches, make a linear sequence of commites. 
+                  - combining work from master to first-branch
+
+git checkout master 
+git rebase first-branch - attach all changes in first branch to master
+
+
+* pushing changes 
+
+ssh-keygen
+cat ~/.ssh/id_rsa.pub - take your public key 
+
+go to github - settings - ssh and gpg key - new ssh key 
+- copy paste ssh key - add ssh key
+
+ssh -T git@github.com  - key in github turns green 
+
+* create branch in central repo
+
+git checkout first-branch 
+git push origin first-branch 
+
+github.com - branch - drop down - master, first-branch 
+
+* push to master 
+git push origin master
+
+
+* revert 
+
+git add revert.txt
+git commit -a -m "revert-1"
+
+make changes 
+git commit -a -m "revert-2"
+
+git log 
+copy first 8 digits of "revert-1"
+
+git checkout <8 digits> revert.txt 
+
+
+* pull request
+
+https://github.com/kubernetes/community/blob/master/contributors/guide/github-workflow.md
+
+- fork the copy to your own account
+
+- git clone <forked repo>
+
+- fetch and rebase 
+
+git remote add upstream <main repo>
+
+git fetch upstream
+git checkout master 
+git rebase upstream/master 
+
+* pull request..
+
+- create branch to add new feature/bug fix 
+git checkout -b mybranch
+
+git add <file>
+git commit 
+
+- push branch to forked repo 
+git push -f <remote name> mybranch 
+
+- create pull request on github.com
+click on pull request
+click on new pull request or compare and pull request 
+
+* pull request..
+
+- if any further changes 
+git commit --amend 
+git push <remote name> mybranch 
+
+
+* on main repo
+
+- we see pull request and notification
+
+- click on file changes to review
+
+- click on + on the line of code to add review comments 
+
+- on pull request repo make changes and commit 
+
+- on main repo pull request -  get notification and can see changes 
+
+- go to pull request - click on merge button
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,6 @@
+* GitHub Actions
+
+- With GitHub Actions you can build end-to-end continuous integration and continuous deployment capabilities directly in your repository. 
+
+- Workflows run in Linux, macOS, Windows, and containers on GitHub-hosted servers. 
+
